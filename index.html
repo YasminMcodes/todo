@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Todo App</title>
+<script defer src="main.js"></script></head>
+
+<body>
+  <div id="app">
+    <div id="projects-container">
+      <div class="projectContainer">
+        <h2>Projects </h2> <button id="addProject">Add Project</button>
+      </div>
+      <ul id="projects-list"></ul>
+      <dialog id="projectDialog">
+        <form method="dialog">
+          <h3>New Project</h3>
+
+          <label>
+            Project name:
+            <input id="projectNameInput" type="text" required />
+          </label>
+
+          <menu>
+            <button id="cancel">Cancel</button>
+            <button id="submitProject" value="default">Add</button>
+          </menu>
+        </form>
+
+    </div>
+   <div class="todo-container">
+    <ul id="todo-list"></ul>
+    <dialog id="todoDialog">
+  <form method="dialog" id="todoForm">
+    <h3>Add Todo</h3>
+
+    <label>
+      Title
+      <input type="text" id="todoTitle" required />
+    </label>
+
+    <label>
+      Description
+      <textarea id="todoDescription"></textarea>
+    </label>
+
+    <label>
+      Due Date
+      <input type="date" id="todoDueDate" />
+    </label>
+
+    <label>
+      Priority
+      <select id="todoPriority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </label>
+
+    <div class="actions">
+      <button value="cancel">Cancel</button>
+      <button id="saveTodoBtn">Add</button>
+    </div>
+  </form>
+</dialog>
+
+   </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
