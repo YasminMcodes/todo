@@ -1,3 +1,4 @@
+import { saveProjects } from "./storage.js";
 export function initUI(appState) {
   let activeProject = null;
 
@@ -111,6 +112,7 @@ export function initUI(appState) {
         if (!confirm(`Delete project "${project.name}"?`)) return;
 
         appState.projects.splice(projectIndex, 1);
+        
         displayProjects();
       });
 
@@ -118,6 +120,7 @@ export function initUI(appState) {
         const newName = prompt("Edit project name:", project.name);
         if (!newName || !newName.trim()) return;
         project.name = newName.trim();
+        
         displayProjects();
       });
 
@@ -142,6 +145,7 @@ export function initUI(appState) {
           if (!confirm("Delete this todo?")) return;
 
           project.todos.splice(todoIndex, 1);
+    
           displayProjects();
         });
         editTodoBtn.addEventListener("click", () => {
@@ -163,6 +167,7 @@ export function initUI(appState) {
             todo.priority = todoPriority.value;
 
             todoDialog.close();
+            
             displayProjects();
 
 

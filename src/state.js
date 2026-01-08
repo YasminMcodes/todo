@@ -5,7 +5,7 @@ import { saveProjects, loadProjects } from "./storage.js";
 
 export default class State {
     constructor() {
-        this.projects = [];
+        this.projects =  [];
         this.activeProjectIndex = 0;
     }
 
@@ -23,6 +23,7 @@ createDefaultProject() {
 addProject(name) {
     const project = new Project(name);
     this.projects.push(project);
+    saveProjects(this.projects)
     return project;
 }
 

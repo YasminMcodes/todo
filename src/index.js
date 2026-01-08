@@ -6,26 +6,13 @@ const appState = new State();
 
 
 
-const project = appState.addProject("Work");
-project.addTodo(
-  "Persist me",
-  "This should survive refresh",
-  "2026-01-15",
-  "high"
-);
-project.addTodo(
-  "Persist me",
-  "This should survive refresh",
-  "2026-01-15",
-  "high"
-);
+if (appState.projects.length === 0) {
+  const project = appState.addProject("Work");
+  project.addTodo("todo item 1", "This should survive refresh", "2026-01-15", "high");
 
-const project2 = appState.addProject("personal");
-project2.addTodo(
-  "fdjfhdds",
-  "fddgfd",
-  "fsfdf"
-);
-console.log(appState.projects);
+  const project2 = appState.addProject("Personal");
+  project2.addTodo("Todo example", "Example description", "2026-01-15", "medium");
+}
+
 
 initUI(appState);
