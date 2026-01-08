@@ -1,0 +1,154 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: lab(88.55% 0.76 -3.06);
+}
+
+button {
+  cursor: pointer;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #85b1e0;
+  color: white;
+  margin-left: 5px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-header {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+ul{
+    list-style: none;
+}
+.todoTitle {
+    font-weight: bold;
+}
+.completed {
+  text-decoration: line-through;
+  font-weight: normal;
+  opacity: 0.6; /* optional but nice */
+}
+.description,
+.date,
+.priority {
+    opacity: 0.6;
+}
+
+
+.project-item {
+  background-color: rgb(229, 222, 222, 0.);
+  border-radius: 6px;
+  padding: 10px;
+  margin: 15px;
+  box-shadow: 0 2px 5px rgba(72, 59, 59, 0.8);
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.project-header span {
+  font-weight: bold;
+  font-size: 18px;
+}
+.todo-list {
+  margin-left: 20px;
+}
+
+.todo-Item-container {
+  background-color: #d5e5df;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.todo-Item-container li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.todoTitle {
+  font-weight: bold;
+}
+
+.completed {
+  text-decoration: line-through;
+  font-weight: normal;
+  opacity: 0.6;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+}
+
+.date, .priority {
+  font-size: 13px;
+  color: #888;
+}
+.priority {
+    color: #f08080;
+} 
+
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+dialog input, 
+dialog textarea, 
+dialog select {
+  width: 100%;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.todo-Item-container li span {
+  margin-left: 6px;
+}
+
+.todo-Item-container:hover {
+  background-color: #eef2f5;
+}
+.project-header button {
+  margin-left: 5px;
+}
